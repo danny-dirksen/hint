@@ -1,8 +1,10 @@
 /* styles.css */
 
 :root {
-  --text: rgb(55, 47, 34);
-  --bg: rgb(255, 228, 180);
+  --text: #241f16;
+  --light: rgba(36, 31, 22, 0.466);
+  --bg: hsl(38, 100%, 90%);
+  --shadow: rgba(255, 255, 255, 0.604);
 }
 
 html, body {
@@ -10,11 +12,12 @@ html, body {
 }
 
 html {
+  font-size: 14pt;
   line-height: 1.0;
   background: var(--bg);
   color: var(--text);
-  letter-spacing: 4px;
-  text-shadow: 1px 1px 2px rgba(255,255,255,0.3);
+  letter-spacing: 0.7ch;
+  text-shadow: 1px 1px 3px var(--shadow);
   -webkit-background-clip: text;
      -moz-background-clip: text;
           background-clip: text;
@@ -27,24 +30,52 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
 }
 
-#next {
-  padding: 0.5em 1em;
-  width: 100%;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.corner {
+  width: min-content;
   position: absolute;
-  bottom: 0;
-  border: none;
-  border-top: 1px solid var(--text);
-  background: var(--bg);
   opacity: 0;
   transition: opacity 0.2s;
-  font: inherit;
-  letter-spacing: inherit;
+  box-sizing: border-box;
+  height: 1.4em;
+  width: 1.4em;
+  margin: 0.5em 1em;
+  padding: 0.2em 0.2em;
+  border-radius: 0.7em;
+  text-align: center;
 }
 
-body:hover #next {
-  opacity: 1;
+.button {
+}
+
+.button:hover {
+}
+
+#drag {
+  letter-spacing: normal;
+}
+
+.top-right { top: 0; right: 0; }
+.top-left { top: 0; left: 0; }
+.bottom-right { bottom: 0; right: 0; }
+.bottom-left { bottom: 0; left: 0; }
+
+body:hover .corner {
+  opacity: 0.5;
+}
+
+.corner:hover { 
+  opacity: 1 !important;
 }
 
 #word {
@@ -56,7 +87,9 @@ body:hover #next {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: rgb(211, 194, 166);
+    --text: rgb(224, 215, 199);
+    --light: rgba(224, 215, 199, 0.481);
     --bg: rgb(28, 28, 28);
+    --shadow: rgba(0, 0, 0, 0.64);
   }
 }
