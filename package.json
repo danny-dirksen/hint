@@ -1,0 +1,12 @@
+{
+  "name": "hint",
+  "version": "1.0.0",
+  "description": "Writer's block? Click for a random one-word hint.",
+  "main": "main.js",
+  "dependencies": {
+    "electron": "^21.0.1"
+  },
+  "scripts": {
+    "start": "electron ."
+  }
+}

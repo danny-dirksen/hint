@@ -1,0 +1,28 @@
+{
+  "name": "hint",
+  "version": "1.0.0",
+  "description": "Writer's block? Click for a random one-word hint.",
+  "main": "app/main.js",
+  "scripts": {
+    "postinstall": "install-app-deps",
+    "start": "electron .",
+    "pack": "build --dir",
+    "dist": "build"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "app",
+    "random",
+    "word",
+    "generator",
+    "art",
+    "writing",
+    "tool"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "latest",
+    "electron-builder": "latest"
+  }
+}
